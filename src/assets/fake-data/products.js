@@ -1,299 +1,186 @@
-// ======= imported  all products images from images folder ========
-import pizzaImg01 from "../images/pizza1.png";
+// all images imported from images directory
+import product_01_image_01 from "../images/product_01.jpg"
+import product_01_image_02 from "../images/product_01.1.jpg"
+import product_01_image_03 from "../images/product_01.3.jpg"
 
-import fastFood03 from "../images/chicken3.png";
-import fastFood04 from "../images/chicken4.png";
+import product_02_image_01 from "../images/product_2.1.jpg"
+import product_02_image_02 from "../images/product_2.2.jpg"
+import product_02_image_03 from "../images/product_2.3.jpg"
 
-import dessert02 from "../images/dessert02.png";
-import dessert03 from "../images/dessert2.png";
-import dessert04 from "../images/dessert3.png";
+import product_03_image_01 from "../images/product_3.1.jpg"
+import product_03_image_02 from "../images/product_3.2.jpg"
+import product_03_image_03 from "../images/product_3.3.jpg"
 
-import coffeeImg02 from "../images/coffe2.png";
+import product_04_image_01 from "../images/product_4.1.jpg"
+import product_04_image_02 from "../images/product_4.2.jpg"
+import product_04_image_03 from "../images/product_4.3.png"
 
-import salad from "../images/slider2.png";
+import product_05_image_01 from "../images/product_04.jpg"
+import product_05_image_02 from "../images/product_08.jpg"
+import product_05_image_03 from "../images/product_09.jpg"
 
-export const popularMenuFood = [
+import product_06_image_01 from "../images/bread(1).png"
+import product_06_image_02 from "../images/bread(2).png"
+import product_06_image_03 from "../images/bread(3).png"
+
+
+
+const products = [
   {
     id: "01",
-    title: "Vegetable Salad",
-    price: 25,
-    imgUrl: fastFood03,
+    title: "Chicken Burger",
+    price: 24.0,
+    image01: product_01_image_01,
+    image02: product_01_image_02,
+    image03: product_01_image_03,
+    category: "Burger",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque. "
   },
+
   {
     id: "02",
-    title: "Chicken",
-    price: 250,
-    imgUrl: fastFood04,
+    title: "Vegetarian Pizza",
+    price: 115.0,
+    image01: product_02_image_01,
+    image02: product_02_image_02,
+    image03: product_02_image_03,
+    category: "Pizza",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
 
   {
     id: "03",
-    title: "Whipped Cream",
-    price: 45,
-    imgUrl: dessert02,
+    title: "Double Cheese Margherita",
+    price: 110.0,
+    image01: product_03_image_01,
+    image02: product_03_image_02,
+    image03: product_03_image_03,
+    category: "Pizza",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
 
   {
     id: "04",
-    title: "Pizza",
-    price: 75,
-    imgUrl: pizzaImg01,
-  },
-];
+    title: "Maxican Green Wave",
+    price: 110.0,
+    image01: product_04_image_01,
+    image02: product_04_image_02,
+    image03: product_04_image_03,
+    category: "Pizza",
 
-export const fastFoodProducts = [
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
+  },
+
   {
     id: "05",
-    title: "Burger",
-    price: 95,
-    imgUrl: fastFood04,
+    title: "Cheese Burger",
+    price: 24.0,
+    image01: product_05_image_01,
+    image02: product_05_image_02,
+    image03: product_05_image_03,
+    category: "Burger",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
   {
     id: "06",
-    title: "Chicken",
-    price: 250,
-    imgUrl: fastFood04,
+    title: "Royal Cheese Burger",
+    price: 24.0,
+    image01: product_01_image_01,
+    image02: product_01_image_02,
+    image03: product_01_image_03,
+    category: "Burger",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
+
   {
     id: "07",
-    title: "Grill Chicken",
-    price: 195,
-    imgUrl: fastFood04,
+    title: "Seafood Pizza",
+    price: 115.0, 
+    image01: product_02_image_01,
+    image02: product_02_image_02,
+    image03: product_02_image_03,
+    category: "Pizza",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
+
   {
     id: "08",
-    title: "Barbeque",
-    price: 275,
-    imgUrl: fastFood04,
+    title: "Thin Cheese Pizza",
+    price: 110.0,
+    image01: product_03_image_01,
+    image02: product_03_image_02,
+    image03: product_03_image_03,
+    category: "Pizza",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
+
   {
     id: "09",
-    title: "Pizza",
-    price: 275,
-    imgUrl: fastFood04,
+    title: "Pizza With Mushroom",
+    price: 110.0,
+    image01: product_04_image_01,
+    image02: product_04_image_02,
+    image03: product_04_image_03,
+    category: "Pizza",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
+
   {
     id: "10",
-    title: "Burger",
-    price: 95,
-    imgUrl: fastFood04,
+    title: "Classic Hamburger",
+    price: 24.0,
+    image01: product_05_image_01,
+    image02: product_05_image_02,
+    image03: product_05_image_03,
+    category: "Burger",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
+
   {
     id: "11",
-    title: "Chicken",
-    price: 250,
-    imgUrl: fastFood04,
+    title: "Crunchy Bread ",
+    price: 35.0,
+    image01: product_06_image_01,
+    image02: product_06_image_02,
+    image03: product_06_image_03,
+    category: "Bread",
+
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
+
   {
     id: "12",
-    title: "Grill Chicken",
-    price: 195,
-    imgUrl: fastFood04,
-  },
-];
+    title: "Delicious Bread ",
+    price: 35.0,
+    image01: product_06_image_02,
+    image02: product_06_image_01,
+    image03: product_06_image_03,
+    category: "Bread",
 
-export const riceMenuProducts = [
-  {
-    id: "12",
-    title: "Fried Rice",
-    price: 95,
-    imgUrl: salad,
-  },
-  {
-    id: "14",
-    title: "Vegetable",
-    price: 250,
-    imgUrl: salad,
-  },
-  {
-    id: "15",
-    title: "Vegetable Salad",
-    price: 195,
-    imgUrl: salad,
-  },
-  {
-    id: "16",
-    title: "Meal",
-    price: 275,
-    imgUrl: salad,
-  },
-  {
-    id: "17",
-    title: "Fried Rice",
-    price: 95,
-    imgUrl: salad,
-  },
-  {
-    id: "18",
-    title: "Vegetable",
-    price: 250,
-    imgUrl: salad,
-  },
-  {
-    id: "19",
-    title: "Vegetable Salad",
-    price: 195,
-    imgUrl: salad,
-  },
-  {
-    id: "20",
-    title: "Meal",
-    price: 275,
-    imgUrl: salad,
-  },
-];
-
-export const dessertProducts = [
-  {
-    id: "21",
-    title: "Whipped Cream",
-    price: 50,
-    imgUrl: dessert03,
-  },
-  {
-    id: "22",
-    title: "Cake Cream",
-    price: 50,
-    imgUrl: dessert02,
-  },
-  {
-    id: "23",
-    title: "Cake",
-    price: 50,
-    imgUrl: dessert03,
-  },
-  {
-    id: "24",
-    title: "Cup Cake",
-    price: 275,
-    imgUrl: dessert04,
-  },
-  {
-    id: "25",
-    title: "Whipped Cream",
-    price: 50,
-    imgUrl: dessert03,
-  },
-  {
-    id: "26",
-    title: "Cake Cream",
-    price: 50,
-    imgUrl: dessert02,
-  },
-  {
-    id: "27",
-    title: "Cake",
-    price: 50,
-    imgUrl: dessert03,
-  },
-  {
-    id: "28",
-    title: "Cup Cake",
-    price: 275,
-    imgUrl: dessert04,
-  },
-];
-
-export const pizzaProducts = [
-  {
-    id: "29",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
-  },
-  {
-    id: "30",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
-  },
-  {
-    id: "31",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
-  },
-  {
-    id: "32",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
-  },
-  {
-    id: "33",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
-  },
-  {
-    id: "34",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
 
   {
-    id: "35",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
-  },
-  {
-    id: "36",
-    title: "Pizza",
-    price: 95,
-    imgUrl: pizzaImg01,
-  },
-];
+    id: "13",
+    title: "Loaf Bread ",
+    price: 35.0,
+    image01: product_06_image_03,
+    image02: product_06_image_02,
+    image03: product_06_image_03,
+    category: "Bread",
 
-export const coffeeProducts = [
-  {
-    id: "37",
-    title: "Hot Coffee",
-    price: 20,
-    imgUrl: coffeeImg02,
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque."
   },
-  {
-    id: "38",
-    title: "Cold Coffee",
-    price: 20,
-    imgUrl: coffeeImg02,
-  },
-  {
-    id: "39",
-    title: "Black Coffee",
-    price: 20,
-    imgUrl: coffeeImg02,
-  },
-  {
-    id: "40",
-    title: "White Coffee",
-    price: 95,
-    imgUrl: coffeeImg02,
-  },
-  {
-    id: "41",
-    title: "Hot Coffee",
-    price: 20,
-    imgUrl: coffeeImg02,
-  },
-  {
-    id: "42",
-    title: "Cold Coffee",
-    price: 20,
-    imgUrl: coffeeImg02,
-  },
+  
+]
 
-  {
-    id: "43",
-    title: "Black Coffee",
-    price: 20,
-    imgUrl: coffeeImg02,
-  },
-  {
-    id: "44",
-    title: "White Coffee",
-    price: 95,
-    imgUrl: coffeeImg02,
-  },
-];
+export default products

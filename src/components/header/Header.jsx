@@ -1,78 +1,91 @@
-import React, { useRef } from "react"
-import "./header.css"
+import React, { useRef, useEffect, useState } from "react"
 import { Container } from "reactstrap"
-const navLinks = [
+import logo from "../../assets/images/res-logo.png"
+import { NavLink, Link } from "react-router-dom"
+import { useSelector, useDispatch } from "react-redux"
+import { cartUiActions } from "../../store/shopping-Cart/cartUiSlice"
+
+import "../../styles/header.css"
+const nav__links = [
   {
     display: "Home",
-    url: "#"
+    path: "/home"
   },
   {
-    display: "About",
-    url: "#"
+    display: "All-Foods",
+    path: "/foods"
   },
   {
-    display: "Menu",
-    url: "#"
-  },
-  {
-    display: "Recipes",
-    url: "#"
+    display: "Cart",
+    path: "/cart"
   },
   {
     display: "Contact",
-    url: "#"
+    path: "/contact"
   }
 ]
 const Header = () => {
-  const menuRef = useRef()
-  const menuToggle = () => menuRef.current.classList.toggle("active__menu")
-  return (
-    <header className='header'>
-      <Container>
-        <div className='navigation'>
-          <div className='logo'>
-            <h2 className='d-flex align-items-center gap-1'>
-              <span>
-                <i class='ri-restaurant-2-line'></i>Chef Food
-              </span>
-            </h2>
-          </div>
-          <div className='nav__menu' ref={menuRef}>
-            <div className='nav__list__wrapper d-flex align-items-center gap-5'>
-              <ul className='nav__list'>
-                {navLinks.map((item, index) => (
-                  <li className='nav__item' key={index}>
-                    <a href={item.url} onClick={menuToggle}>
-                      {item.display}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+  const menuRef = useRef(null)
 
-              <div className='menu__right'>
-                <div className='custom__search'>
-                  <input placeholder='search item...' type='text' />
-                  <span>
-                    <i class='ri-search-line'></i>
-                  </span>
-                </div>
-              </div>
+  const toggleMenu = () => menuRef.current.classList.toggle("show__menu")
+  const [show, setShow] = useState(false)
+  const transitionNavBar = () => {
+    if (window.scrollY > 100) {
+      setShow(true)
+    } else {
+      setShow(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", transitionNavBar)
+    return () => window.removeEventListener("scroll", transitionNavBar)
+  }, [])
+
+  /* redux toolkit */
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity)
+  const dispatch = useDispatch()
+  const toggleCart = () => {
+    dispatch(cartUiActions.toggle())
+  }
+
+  return (
+    <header className={`nav ${show && "header__black"}`}>
+      <Container>
+        <div className='nav__wrapper d-flex align-items-center justify-content-between'>
+          <div className='logo'>
+            <img src={logo} alt='' />
+            <h5>Restaurant</h5>
+          </div>
+          {/* =========menu ======= */}
+          <div className='navigation' ref={menuRef}>
+            <div className='menu d-flex align-items-center gap-4'>
+              {nav__links.map((item, index) => (
+                <NavLink
+                  onClick={toggleMenu}
+                  to={item.path}
+                  key={index}
+                  className={(navClass) =>
+                    navClass.isActive ? "active__menu" : ""
+                  }
+                >
+                  {item.display}
+                </NavLink>
+              ))}
             </div>
           </div>
-          {/* nav right */}
-          {/* basket */}
-
-          <div>
-            <span className='cart__icon'>
+          {/* ?=======nav right icons */}
+          <div className='nav__right d-flex align-items-center gap-4'>
+            <span className='cart__icon' onClick={toggleCart}>
               <i class='ri-shopping-bag-line'></i>
-              <span className='badge'> 2</span>
+              <span className='cart__badge'>{totalQuantity}</span>
             </span>
-          </div>
-          {/* mobile */}
-          <div className='mobile__menu'>
-            <span>
-              {" "}
-              <i class='ri-menu-line' onClick={menuToggle}></i>
+            <span className='user'>
+              <Link to='/login'>
+                <i class='ri-user-line'></i>
+              </Link>
+            </span>
+            <span className='mobile__menu' onClick={toggleMenu}>
+              <i class='ri-menu-line'></i>
             </span>
           </div>
         </div>
